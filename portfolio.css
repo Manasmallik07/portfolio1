@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background: #0866ff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #0866ff;
+    color: #fff;
+}
+
+.wrapper {
+    display: flex; /* Use flex for alignment */
+    justify-content: center; /* Center items */
+    list-style: none;
+    height: auto; /* Adjust to fit content */
+    padding: 40px 0; /* Add vertical spacing */
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Smooth transition */
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .gmail:hover,
+.wrapper .linkedin:hover,
+.wrapper .github:hover {
+    background: rgba(0, 0, 0, 0.05); /* Slight background change on hover */
+}
+
+.wrapper .gmail:hover,
+  .wrapper .gmail:hover .tooltip,
+  .wrapper .gmail:hover .tooltip::before {
+    background: #D50029;
+    color: #fff;
+  }
+  
+  .wrapper .linkedin:hover,
+  .wrapper .linkedin:hover .tooltip,
+  .wrapper .linkedin:hover .tooltip::before {
+    background:  #0077B5;
+    color: #fff;
+  }
+  
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background: #181717;
+    color: #fff;
+  }
+
+.icon-svg svg {
+    fill: black; /* Change to black color */
+    width: 1.5em; /* Adjust size as needed */
+    height: auto; /* Keep aspect ratio */
+}
+
+.icon-svg:hover svg {
+    fill: grey; /* Change color on hover if desired */
+}
+
+.cnt {
+    text-align: center;
+}
+.about-me{
+
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
