@@ -6,11 +6,24 @@ body {
     background: #f4f4f4;
 }
 
+/* Animate the header on page load */
 header {
     background: #0866ff;
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 nav ul {
@@ -23,9 +36,27 @@ nav ul li {
     margin: 0 15px;
 }
 
+/* Add hover effect on nav links */
 nav a {
     color: #fff;
     text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+nav a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 section {
@@ -48,11 +79,11 @@ footer {
 }
 
 .wrapper {
-    display: flex; /* Use flex for alignment */
-    justify-content: center; /* Center items */
+    display: flex;
+    justify-content: center;
     list-style: none;
-    height: auto; /* Adjust to fit content */
-    padding: 40px 0; /* Add vertical spacing */
+    height: auto;
+    padding: 40px 0;
     font-family: "Poppins", sans-serif;
 }
 
@@ -69,7 +100,7 @@ footer {
     flex-direction: column;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: all 0.2s ease-in-out; /* Smooth transition */
+    transition: all 0.2s ease-in-out;
 }
 
 .wrapper .tooltip {
@@ -107,48 +138,48 @@ footer {
 .wrapper .gmail:hover,
 .wrapper .linkedin:hover,
 .wrapper .github:hover {
-    background: rgba(0, 0, 0, 0.05); /* Slight background change on hover */
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .wrapper .gmail:hover,
-  .wrapper .gmail:hover .tooltip,
-  .wrapper .gmail:hover .tooltip::before {
+.wrapper .gmail:hover .tooltip,
+.wrapper .gmail:hover .tooltip::before {
     background: #D50029;
     color: #fff;
-  }
-  
-  .wrapper .linkedin:hover,
-  .wrapper .linkedin:hover .tooltip,
-  .wrapper .linkedin:hover .tooltip::before {
-    background:  #0077B5;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+    background: #0077B5;
     color: #fff;
-  }
-  
-  .wrapper .github:hover,
-  .wrapper .github:hover .tooltip,
-  .wrapper .github:hover .tooltip::before {
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
     background: #181717;
     color: #fff;
-  }
+}
 
 .icon-svg svg {
-    fill: black; /* Change to black color */
-    width: 1.5em; /* Adjust size as needed */
-    height: auto; /* Keep aspect ratio */
+    fill: black;
+    width: 1.5em;
+    height: auto;
 }
 
 .icon-svg:hover svg {
-    fill: grey; /* Change color on hover if desired */
+    fill: grey;
 }
 
 .cnt {
     text-align: center;
 }
-.about-me{
 
-  font-family: "Playwrite GB S", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 30px;
+.about-me {
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
 }
